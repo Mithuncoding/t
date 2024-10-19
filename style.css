@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at bottom, #000428, #004e92);
+  }
+  
+  /* Navigation Bar Styles */
+  .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem 0;
+      z-index: 20;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .nav-links li {
+      margin: 0 1.5rem;
+  }
+  
+  .nav-links a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.2rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+      color: #ff4081;
+      transform: scale(1.1);
+  }
+  
+  /* Existing Styles... */
+  
+  #universe-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      z-index: 10;
+      font-family: Arial, sans-serif;
+  }
+  
+  #subtext {
+      position: absolute;
+      top: calc(50% + 2.5rem);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      color: white;
+      text-transform: lowercase;
+      z-index: 10;
+      font-family: Arial, sans-serif;
+      letter-spacing: 0.1em;
+  }
+  
+  /* Optional: Sections Styling */
+  section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      /* Add background or content as needed */
+  }
+  
+  /* Smooth Scrolling */
+  html {
+      scroll-behavior: smooth;
+  }
+  
+  @media (max-width: 768px) {
+      .nav-links {
+          flex-direction: column;
+          background: rgba(0, 0, 0, 0.9);
+          position: fixed;
+          top: 60px;
+          right: 0;
+          width: 200px;
+          height: calc(100% - 60px);
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+      }
+  
+      .nav-links li {
+          margin: 1.5rem 0;
+          text-align: center;
+      }
+  
+      .navbar.active .nav-links {
+          transform: translateX(0);
+      }
+  
+      /* Add a hamburger menu icon if needed */
+  }
